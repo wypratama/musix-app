@@ -35,13 +35,41 @@ body {
 
 
   background-color: var(--neutral-700);
-  overflow: scroll;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--neutral-700);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #1BB17D, #283890);
+  border-radius: 6px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #1BB17D, #283890);
+  border-radius: 6px;
+
 }
 
 .app-header {
   padding-top: 18px;
   position: sticky;
   top: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
   background-color: var(--neutral-700);
 }
@@ -52,9 +80,22 @@ body {
   flex-direction: row;
 }
 
+.app-header__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-header__right>div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
 .app-content {
   width: 100%;
-  overflow-y: scroll;
 }
 
 
@@ -87,4 +128,42 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.app-button {
+  background-color: var(--bg-app);
+  color: var(--neutral-100);
+  padding: 8px 16px;
+
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+
+  background: linear-gradient(#272723, #272723) padding-box,
+    linear-gradient(to bottom, #1BB17D, #283890) border-box;
+  border-radius: 4px;
+  border: 1px solid transparent;
+
+}
+
+.app-date-input {
+  background-color: var(--bg-app);
+  padding: 3.5px 10px;
+
+  background: linear-gradient(#272723, #272723) padding-box,
+    linear-gradient(to bottom, #1BB17D, #283890) border-box;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.app-date-input input {
+  background-color: var(--bg-app);
+  color: var(--neutral-100);
+  padding: 6px 10px;
+
+  border: none;
 }
