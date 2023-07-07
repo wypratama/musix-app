@@ -1,10 +1,90 @@
 :root {
-  --bg-app: #272723
+  --bg-app: #272723;
+
+  --neutral-100: #F3F4F8;
+  --neutral-700: #2E2E2E;
 }
 
 body {
   background-color: var(--bg-app);
+  color: var(--neutral-100);
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 
+  height: 100vh;
+
+  padding-top: 105px;
+  padding-bottom: 64px;
+  padding-left: 70px;
+  padding-right: 70px;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container {}
+.app {
+  height: 100%;
+  width: 100%;
+
+  border-radius: 20px;
+  padding: 0 8px;
+  padding-bottom: 28px;
+
+
+  background-color: var(--neutral-700);
+  overflow: scroll;
+}
+
+.app-header {
+  padding-top: 18px;
+  position: sticky;
+  top: 0;
+
+  background-color: var(--neutral-700);
+}
+
+
+.app-header__left {
+  display: flex;
+  flex-direction: row;
+}
+
+.app-content {
+  width: 100%;
+  overflow-y: scroll;
+}
+
+
+.app-content__header th {
+  text-align: start;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.24px;
+  text-transform: uppercase;
+
+  background-color: var(--bg-app);
+  padding: 18px 16px;
+}
+
+
+
+.app-content__body {
+  font-size: 14px;
+}
+
+.app-content__body tr:nth-child(even) {
+  background-color: var(--bg-app);
+}
+
+.app-content__body td {
+  padding: 25px 16px;
+  font-size: 13.5px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
