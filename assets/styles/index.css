@@ -1,0 +1,10 @@
+:root {
+  --bg-app: #272723
+}
+
+body {
+  background-color: var(--bg-app);
+
+}
+
+.container {}
